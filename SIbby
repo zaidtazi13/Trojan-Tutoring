@@ -1,0 +1,15 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("h3").forEach(function (name) {
+    if (name.textContent.trim().toLowerCase() === "sabtain rashid") {
+      const card = name.closest(".team-card, .card, article, div");
+      if (card) {
+        const role = card.querySelector(".team-role, .role, p");
+        if (role) {
+          role.textContent = "Medical Student · Newcastle University";
+        }
+      }
+    }
+  });
+});
+</script>
