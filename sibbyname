@@ -1,0 +1,41 @@
+<script>
+window.addEventListener("load", function () {
+
+  const elements = Array.from(document.querySelectorAll("h1,h2,h3,h4,h5,p,span,div"));
+
+  const sabtainName = elements.find(el =>
+    el.children.length === 0 &&
+    el.textContent.trim().toLowerCase().includes("sabtain rashid")
+  );
+
+  if (!sabtainName) return;
+
+  let container = sabtainName.parentElement;
+
+  for (let i = 0; i < 6 && container; i++) {
+
+    const possibleRoles = Array.from(
+      container.querySelectorAll("p,span,div")
+    );
+
+    const role = possibleRoles.find(el => {
+      const text = el.textContent.trim().toLowerCase();
+
+      return (
+        el.children.length === 0 &&
+        el !== sabtainName &&
+        text.includes("student") &&
+        text.length < 150
+      );
+    });
+
+    if (role) {
+      role.textContent = "Medical Student · Newcastle University";
+      return;
+    }
+
+    container = container.parentElement;
+  }
+
+});
+</script>
