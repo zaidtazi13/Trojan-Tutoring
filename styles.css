@@ -1936,3 +1936,332 @@ a[href="#reem-profile"]:hover .team-preview-photo img{
 .tips-depth-inline{margin:0 auto 26px!important;max-width:1100px;}
 .safeguarding-heading{text-align:center!important;}
 .safeguarding-heading p{margin-left:auto!important;margin-right:auto!important;max-width:760px;}
+/* Homepage academic pathways */
+.academic-standard-home{padding-top:48px!important;padding-bottom:48px!important;background:linear-gradient(135deg,#0f2b4a,#163b65);color:#fff;}
+.academic-standard-home .section-head h2,.academic-standard-home .section-head p{color:#fff!important;}
+.academic-standard-home .eyebrow{color:#e7bd62!important;}
+.academic-standard-home .section-head p{max-width:850px;margin-left:auto;margin-right:auto;font-size:1.08rem;}
+.education-pathway-home .click-card,.admissions-pathway-home .click-card{text-decoration:none;}
+.education-pathway-home .support-card,.admissions-pathway-home .support-card{height:100%;transition:transform .2s ease,box-shadow .2s ease;}
+.education-pathway-home .support-card:hover,.admissions-pathway-home .support-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(15,43,74,.12);}
+
+/* Homepage pathway and difference-card refinement */
+.difference-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:30px;}
+.difference-card{background:#fff;color:#0f2b4a;border:1px solid rgba(255,255,255,.24);border-radius:16px;padding:24px;box-shadow:0 12px 28px rgba(0,0,0,.12);text-align:left;}
+.difference-card h3{margin:0 0 10px;color:#0f2b4a;}
+.difference-card p{margin:0;color:#526477;line-height:1.65;}
+.difference-icon{width:44px;height:44px;border-radius:12px;background:#f3e3b9;color:#0f2b4a;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem;margin-bottom:16px;}
+.pathway-row{display:flex;align-items:stretch;justify-content:center;gap:12px;margin-top:30px;}
+.pathway-step{flex:1;min-width:0;background:#fff;border:1px solid rgba(15,43,74,.12);border-radius:16px;padding:24px;text-decoration:none!important;color:#0f2b4a;box-shadow:0 10px 26px rgba(15,43,74,.07);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+.pathway-step:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(15,43,74,.13);border-color:rgba(196,151,58,.55);}
+.pathway-step h3{margin:10px 0 8px;color:#0f2b4a;}
+.pathway-step p{margin:0 0 14px;color:#526477;line-height:1.6;}
+.pathway-number{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:30px;padding:0 10px;border-radius:999px;background:#0f2b4a;color:#fff;font-size:.78rem;font-weight:800;letter-spacing:.06em;}
+.pathway-link{font-weight:800;color:#9b6f1e;}
+.pathway-arrow{display:flex;align-items:center;justify-content:center;color:#c4973a;font-size:2rem;font-weight:800;flex:0 0 34px;}
+.admissions-pathway .pathway-step{background:linear-gradient(180deg,#fff,#fbfaf7);}
+@media(max-width:1000px){.difference-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.pathway-row{display:grid;grid-template-columns:1fr;gap:12px;max-width:720px;margin-left:auto;margin-right:auto;}.pathway-arrow{height:26px;transform:rotate(90deg);font-size:1.7rem;}.pathway-step{width:100%;}.admissions-pathway .pathway-arrow,.school-pathway .pathway-arrow{display:flex;}}
+@media(max-width:600px){.difference-grid{grid-template-columns:1fr;}.difference-card,.pathway-step{padding:20px;}}
+
+/* Tutor recruitment and team CTA refinement */
+.join-team-panel{max-width:1080px;padding:52px 56px;}
+.join-team-panel .section-head{max-width:780px;margin:0 auto 34px;text-align:center;}
+.join-team-panel .section-head p{font-size:.96rem;line-height:1.7;max-width:720px;margin-left:auto;margin-right:auto;}
+.join-team-form input,.join-team-form textarea{padding:16px 17px;border-radius:14px;}
+.join-team-form .form-grid{gap:22px;}
+.team-tutor-cta{background:#f8f6f1;}
+.team-tutor-cta-panel{max-width:1000px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:42px 48px;box-shadow:0 16px 40px rgba(5,23,42,.08);}
+.team-tutor-cta-panel p{max-width:760px;margin:0 auto 24px;color:var(--muted);line-height:1.7;}
+@media(max-width:700px){.join-team-panel{padding:34px 22px}.team-tutor-cta-panel{padding:32px 22px;}}
+
+
+/* Responsive retractable navigation: collapse earlier so the header never crowds smaller screens */
+@media(max-width:1100px){
+  header > .container.nav{
+    min-height:70px;
+    position:relative;
+  }
+  .menu{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    width:44px;
+    height:44px;
+    border:1px solid rgba(5,23,42,.12);
+    border-radius:12px;
+    background:#fff;
+    cursor:pointer;
+    line-height:1;
+    flex:0 0 44px;
+    z-index:3;
+  }
+  .nav-links{
+    display:none !important;
+    position:absolute;
+    left:0;
+    right:0;
+    top:calc(100% + 1px);
+    margin:0 !important;
+    padding:14px;
+    flex-direction:column;
+    align-items:stretch !important;
+    gap:4px !important;
+    background:rgba(255,255,255,.99);
+    border:1px solid rgba(5,23,42,.09);
+    border-top:0;
+    border-radius:0 0 16px 16px;
+    box-shadow:0 18px 36px rgba(5,23,42,.14);
+    max-height:calc(100vh - 92px);
+    overflow-y:auto;
+    z-index:2;
+  }
+  .nav-links.open{display:flex !important;}
+  .nav-links a:not(.btn), .nav-links .btn, header .btn{
+    width:100%;
+    min-height:46px;
+    justify-content:flex-start !important;
+    text-align:left !important;
+    padding:10px 14px !important;
+    font-size:.82rem !important;
+  }
+  .nav-links .btn, header .nav-links .btn{justify-content:center !important;text-align:center !important;margin-top:4px;}
+}
+@media(max-width:620px){
+  .brand span{font-size:1.25rem !important;letter-spacing:.02em !important;}
+  .brand img{width:42px !important;height:42px !important;}
+  header > .container.nav{min-height:64px;}
+}
+
+/* Face-centred crops: Sabtain, Dr Rachid and Zaid */
+#new-tutor-profile .ilyas-profile-photo img,
+.team-preview-photo.new-tutor-photo img{
+  object-position:50% 50% !important;
+}
+.rachid-photo img,
+.founder-photo img,
+.zaid-founder-image{
+  width:100% !important;
+  max-width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:50% 50% !important;
+  transform:none !important;
+}
+.polished-profile-card[href*="rachid-profile"] img,
+.polished-profile-card[href*="zaid-profile"] img{
+  object-position:50% 50% !important;
+}
+
+/* Refined portrait crops requested: Sabtain preview zoom, Rachid/Zaid slightly lower */
+a[href="#new-tutor-profile"] .team-preview-photo.new-tutor-photo img{
+  object-position:50% 38% !important;
+  transform:scale(1.22) !important;
+  transform-origin:50% 38% !important;
+}
+a[href="#new-tutor-profile"]:hover .team-preview-photo.new-tutor-photo img{
+  transform:scale(1.26) !important;
+}
+.rachid-photo img{
+  object-position:50% 42% !important;
+}
+.founder-photo img,
+.founder-photo .zaid-founder-image{
+  object-position:50% 42% !important;
+}
+.polished-profile-card[href*="rachid-profile"] img{
+  object-position:50% 42% !important;
+}
+.polished-profile-card[href*="zaid-profile"] img{
+  object-position:50% 42% !important;
+}
+
+/* Portrait crop refinement: Sabtain face-only preview; Rachid zoomed and shifted left */
+a[href="#new-tutor-profile"] .team-preview-photo.new-tutor-photo img{
+  object-position:50% 30% !important;
+  transform:scale(1.75) !important;
+  transform-origin:50% 30% !important;
+}
+a[href="#new-tutor-profile"]:hover .team-preview-photo.new-tutor-photo img{
+  transform:scale(1.80) !important;
+}
+.rachid-photo img{
+  object-position:42% 42% !important;
+  transform:scale(1.14) !important;
+  transform-origin:42% 42% !important;
+}
+.polished-profile-card[href*="rachid-profile"] img{
+  object-position:42% 42% !important;
+  transform:scale(1.10) !important;
+  transform-origin:42% 42% !important;
+}
+.polished-profile-card[href*="rachid-profile"]:hover img{
+  transform:scale(1.13) !important;
+}
+
+/* Final portrait correction: Sabtain tighter face crop; Dr Rachid zoomed out and centred */
+a[href="#new-tutor-profile"] .team-preview-photo.new-tutor-photo img{
+  object-position:50% 27% !important;
+  transform:scale(1.92) !important;
+  transform-origin:50% 27% !important;
+}
+a[href="#new-tutor-profile"]:hover .team-preview-photo.new-tutor-photo img{
+  transform:scale(1.96) !important;
+}
+.rachid-photo img{
+  width:100% !important;
+  max-width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:50% 50% !important;
+  transform:scale(.96) !important;
+  transform-origin:center center !important;
+}
+.polished-profile-card[href*="rachid-profile"] img{
+  object-position:50% 50% !important;
+  transform:scale(.96) !important;
+  transform-origin:center center !important;
+}
+.polished-profile-card[href*="rachid-profile"]:hover img{
+  transform:scale(1) !important;
+}
+
+/* Final portrait framing: Sabtain shoulder-up; Dr Rachid centred with background person cropped out */
+a[href="#new-tutor-profile"] .team-preview-photo.new-tutor-photo img{
+  object-position:50% 28% !important;
+  transform:scale(2.20) !important;
+  transform-origin:50% 28% !important;
+}
+a[href="#new-tutor-profile"]:hover .team-preview-photo.new-tutor-photo img{
+  transform:scale(2.24) !important;
+}
+.rachid-photo img{
+  width:100% !important;
+  max-width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:50% 42% !important;
+  transform:none !important;
+  transform-origin:center center !important;
+}
+.polished-profile-card[href*="rachid-profile"] img{
+  width:100% !important;
+  max-width:100% !important;
+  height:245px !important;
+  object-fit:cover !important;
+  object-position:50% 42% !important;
+  transform:none !important;
+  transform-origin:center center !important;
+}
+.polished-profile-card[href*="rachid-profile"]:hover img{transform:scale(1.025) !important;}
+/* Final portrait framing: Sabtain and Emily shoulders-up; Dr Rachid zoomed out and centred */
+a[href="#new-tutor-profile"] .team-preview-photo.new-tutor-photo img{
+  transform:none !important;
+  object-fit:cover !important;
+  object-position:50% 50% !important;
+}
+a[href="#new-tutor-profile"]:hover .team-preview-photo.new-tutor-photo img{transform:none !important;}
+a[href="#emily-profile"] .team-preview-photo img{
+  transform:none !important;
+  object-fit:cover !important;
+  object-position:50% 50% !important;
+}
+a[href="#emily-profile"]:hover .team-preview-photo img{transform:none !important;}
+.rachid-photo img{
+  transform:none !important;
+  object-fit:cover !important;
+  object-position:72% 50% !important;
+}
+a[href="team.html#rachid-profile"] .profile-image-wrap img{
+  transform:none !important;
+  object-fit:cover !important;
+  object-position:72% 50% !important;
+}
+a[href="team.html#rachid-profile"]:hover .profile-image-wrap img{transform:none !important;}
+
+
+/* Requested final portrait framing: Sabtain shoulders-up with full face; Dr Rachid fully visible and centred */
+a[href="#new-tutor-profile"] .team-preview-photo.new-tutor-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:50% 50% !important;
+  transform:none !important;
+}
+a[href="#new-tutor-profile"]:hover .team-preview-photo.new-tutor-photo img{transform:none !important;}
+.rachid-photo{
+  background:#eef1f4 !important;
+}
+.rachid-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:50% 50% !important;
+  transform:scale(.90) !important;
+  transform-origin:center center !important;
+}
+a[href="team.html#rachid-profile"] .profile-image-wrap{
+  background:#eef1f4 !important;
+}
+a[href="team.html#rachid-profile"] .profile-image-wrap img{
+  width:100% !important;
+  height:245px !important;
+  object-fit:contain !important;
+  object-position:50% 50% !important;
+  transform:scale(.90) !important;
+  transform-origin:center center !important;
+}
+a[href="team.html#rachid-profile"]:hover .profile-image-wrap img{transform:scale(.90) !important;}
+
+/* FINAL requested photo crops — original photos only, no AI */
+/* Sabtain (Sibby): match the other tutor cards with a tight shoulders-up portrait. */
+a[href="#new-tutor-profile"] .team-preview-photo.new-tutor-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:50% 31% !important;
+  transform:scale(2.05) !important;
+  transform-origin:50% 31% !important;
+}
+a[href="#new-tutor-profile"]:hover .team-preview-photo.new-tutor-photo img{
+  transform:scale(2.05) !important;
+}
+/* Dr Rachid: crop the original photo to completely fill each frame while keeping his entire face visible and centred. */
+.rachid-photo img{
+  width:100% !important;
+  max-width:none !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:50% 34% !important;
+  transform:none !important;
+  background:transparent !important;
+}
+.rachid-photo:hover img{transform:none !important;}
+a[href="team.html#rachid-profile"] .profile-image-wrap img{
+  width:100% !important;
+  max-width:none !important;
+  height:245px !important;
+  object-fit:cover !important;
+  object-position:50% 34% !important;
+  transform:none !important;
+  background:transparent !important;
+}
+a[href="team.html#rachid-profile"]:hover .profile-image-wrap img{transform:none !important;}
+
+/* Final portrait framing: Sabtain slightly wider shoulders-up; Dr Rachid face centred */
+a[href="#new-tutor-profile"] .team-preview-photo.new-tutor-photo img{
+  object-position:50% 38% !important;
+  transform:scale(1.10) !important;
+  transform-origin:50% 38% !important;
+}
+a[href="#new-tutor-profile"]:hover .team-preview-photo.new-tutor-photo img{
+  transform:scale(1.13) !important;
+}
+.rachid-photo img,
+.polished-profile-card[href*="rachid-profile"] img{
+  width:100% !important;
+  max-width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:72% 36% !important;
+  transform:none !important;
+}

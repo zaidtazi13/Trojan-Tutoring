@@ -3,7 +3,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".menu");
   const nav = document.querySelector(".nav-links");
   if (menu && nav) {
-    menu.addEventListener("click", () => nav.classList.toggle("open"));
+    menu.setAttribute("aria-expanded", "false");
+    menu.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      menu.setAttribute("aria-expanded", String(isOpen));
+      menu.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      menu.textContent = isOpen ? "×" : "☰";
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menu.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-label", "Open navigation");
+        menu.textContent = "☰";
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1100) {
+        nav.classList.remove("open");
+        menu.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-label", "Open navigation");
+        menu.textContent = "☰";
+      }
+    });
   }
 
   const year = document.querySelectorAll("[data-year]");
