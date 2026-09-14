@@ -1,0 +1,20 @@
+UPLOAD BOTH FILES INTO YOUR WEBSITE'S assets FOLDER:
+
+assets/homepage-intro.mp4
+assets/homepage-video-preview.jpg
+
+Then use this video element on the homepage:
+
+<video class="hero-home-video"
+       controls
+       playsinline
+       preload="auto"
+       poster="./assets/homepage-video-preview.jpg"
+       aria-label="Trojan Tutoring introduction video">
+  <source src="./assets/homepage-intro.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+IMPORTANT:
+Keep the filenames exactly as shown above, including lowercase letters and hyphens.
+On Vercel/GitHub, make sure the assets folder is uploaded in the same deployment as index.html.
