@@ -3048,17 +3048,3 @@ a[href="#new-tutor-profile"]:hover .team-preview-photo.new-tutor-photo img{
   .policy-dropdown summary{padding:17px 18px !important;}
   .policy-dropdown .legal-detail-content{padding:3px 18px 20px !important;}
 }
-
-/* Homepage hero introduction video */
-.hero-mark .hero-home-video {
-  width: min(470px, 92%);
-  aspect-ratio: 1 / 1;
-  display: block;
-  object-fit: cover;
-  border-radius: 26px;
-  box-shadow: 0 24px 36px rgba(0,0,0,.22);
-  background: #071b31;
-}
-@media (max-width: 900px) {
-  .hero-mark .hero-home-video { width: min(520px, 94%); }
-}
